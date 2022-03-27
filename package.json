@@ -1,9 +1,6 @@
 {
   "name": "hmv",
-  "version": "0.0.1",
-  "engines": {
-    "node": "16.x"
-  },
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
