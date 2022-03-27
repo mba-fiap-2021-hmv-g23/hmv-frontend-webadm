@@ -20,7 +20,6 @@
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(255 255 255), 0px 1px 3px 0px rgb(255 255 255 / 12%);
   background-color: transparent;
   color: #ffffff;
-  width: 100%;
 }
 
 .item {
@@ -48,5 +47,13 @@
   left: 0;
   width: 300px;
   margin: auto;
+}
+
+.value {
+  margin: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #3594d5;
+  color: #000000;
 }
 

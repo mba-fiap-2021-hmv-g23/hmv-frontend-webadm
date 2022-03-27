@@ -31,17 +31,15 @@ export class JwtInterceptorService implements HttpInterceptor {
 
         if (moment(expiresIn).diff(moment(), 'minute') <= 0) {
           return await this.http
-            .post(`${environment.api}/refresh-token`, { refreshToken })
+            .post(`${environment.api}/refresh-token`, {
+              refreshToken: refreshToken,
+            })
             .toPromise()
             .then(async (newAuth) => {
               if (item) {
-                const auth = JSON.parse(item);
-                await localStorage.setItem(
-                  'auth',
-                  JSON.stringify({ ...auth, ...newAuth })
-                );
-                const { accessToken } = newAuth as any;
-                this.accessToken = accessToken;
+                const auth = { ...JSON.parse(item), ...newAuth };
+                await localStorage.setItem('auth', JSON.stringify(auth));
+                this.accessToken = auth.accessToken;
               }
             });
         }
