@@ -1,0 +1,36 @@
+<mat-card
+  matRipple
+  class="content"
+  (click)="onClick()"
+  [class.selected]="queueCall.fullName === selectedId"
+>
+  <mat-card-title>
+    <h2>{{ queueCall.fullName }}</h2>
+  </mat-card-title>
+  <mat-card-subtitle>
+    Classificação:
+
+    <span [ngSwitch]="queueCall.riskClassification">
+      <span
+        style="color: rgb(255, 0, 0); font-weight: bold"
+        *ngSwitchCase="'EMERGENCIA'"
+        >Emergência</span
+      >
+      <span
+        style="color: rgb(191, 194, 2); font-weight: bold"
+        *ngSwitchCase="'MUITO_URGENTE'"
+        >Muito Urgente</span
+      >
+      <span
+        style="color: rgb(0, 255, 34); font-weight: bold"
+        *ngSwitchCase="'POUCO_URGENTE'"
+        >Pouco Urgente</span
+      >
+      <span
+        style="color: rgb(0, 89, 255); font-weight: bold"
+        *ngSwitchCase="'NAO_URGENTE'"
+        >Não Urgente</span
+      >
+    </span>
+  </mat-card-subtitle>
+</mat-card>

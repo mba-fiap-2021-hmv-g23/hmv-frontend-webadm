@@ -1,0 +1,44 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="container">
+  <div class="container-logo">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <img class="logo" src="./../../../assets/images/logo.svg" />
+      <div fxLayout="column" fxLayoutAlign="space-evenly start" class="title">
+        <div>HMV</div>
+        <br />
+        <div>PRIME</div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="space-between center">
+    <div class="container-form" style="height: 300px">
+      <h2 class="title-form">Login</h2>
+      <form [formGroup]="form" fxLayout="column" fxLayoutAlign="center start">
+        <mat-label>Usuário</mat-label>
+        <mat-form-field class="mat-focused" appearance="outline">
+          <input
+            formControlName="login"
+            placeholder="digite o usuário"
+            type="text"
+            matInput
+          />
+        </mat-form-field>
+
+        <mat-label>Senha</mat-label>
+        <mat-form-field class="mat-focused" appearance="outline">
+          <input
+            formControlName="password"
+            placeholder="digite a senha"
+            type="password"
+            matInput
+          />
+        </mat-form-field>
+
+        <div fxLayoutAlign="center center" class="container-button">
+          <button mat-raised-button color="primary" (click)="login()">
+            ENTRAR
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

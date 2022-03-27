@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "ms-vsliveshare.vsliveshare",
+    "exodiusstudios.comment-anchors",
+    "kisstkondoros.typelens",
+    "mikael.angular-beastcode",
+    "johnpapa.angular-essentials",
+    "angular.ng-template",
+    "cyrilletuzi.angular-schematics",
+    "johnpapa.angular2",
+    "thorstenrintelen.angular-spec-generator",
+  ]
+}

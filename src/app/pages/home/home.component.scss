@@ -1,0 +1,48 @@
+.container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  background-color: aliceblue;
+}
+
+.sidenav-container {
+  background-color: #2366af;
+}
+
+.card {
+  max-width: 400px;
+  background-color: transparent;
+}
+
+.header-image {
+  background-image: url('https://miro.medium.com/max/1400/1*FNejOoqz6KM_tqynKm2ECQ.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mat-card-avatar {
+  height: 75px;
+  width: 75px;
+}
+
+.logo {
+  height: 100px;
+  padding-bottom: 50px;
+}
+
+.patient-card {
+  position: fixed;
+  max-height: calc(100vh - 110px);
+  background-color: transparent;
+  overflow: auto;
+  width: 400px;
+}

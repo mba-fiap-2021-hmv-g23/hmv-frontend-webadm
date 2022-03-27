@@ -1,0 +1,61 @@
+.container {
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.container-logo {
+  margin-bottom: 36px;
+}
+
+.logo {
+  width: 150px;
+  background-color: #68c6f970;
+  border-radius: 35%;
+}
+
+.title {
+  height: 100px;
+  padding-left: 16px;
+  color: #2366af;
+
+  div {
+    font-size: 50px !important;
+  }
+}
+
+.container-form {
+  height: 100%;
+  width: 300px;
+  color: #2366af;
+  font-weight: bold;
+
+  .title-form {
+    padding: 30px;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    color: #2366af;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    font-weight: 600;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #2366af !important;
+
+  }
+
+  ::ng-deep .mat-form-field-outline {
+    background-color: white;
+  }
+}
+
+.container-button {
+  width: 100%;
+
+  .mat-button-base {
+    width: 150px;
+  }
+}

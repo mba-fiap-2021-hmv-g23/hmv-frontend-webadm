@@ -1,0 +1,31 @@
+<ng-container>
+  <mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened>
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>Olá, {{ userName }}!</mat-card-title>
+          <mat-card-subtitle>
+            Aqui estão os pacientes a caminho do hospital
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <div class="patient-card">
+        <app-patient
+          *ngFor="let queUeCall of queUeCalls"
+          [queueCall]="queUeCall"
+          [selectedId]="selectedQueueCall.fullName"
+          (onSelected)="onSelected($event)"
+        ></app-patient>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-container">
+      <app-info
+        *ngIf="selectedQueueCall"
+        [queueCall]="selectedQueueCall"
+        [patient]="getPatientInfo()"
+      ></app-info>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

@@ -1,0 +1,90 @@
+<mat-card class="card">
+  <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+    <div mat-card-avatar class="header-image"></div>
+
+    <div fxLayout="column" fxLayoutAlign="start">
+      <h1>{{ queueCall.fullName }}</h1>
+
+      <div [ngSwitch]="queueCall.riskClassification">
+        <span
+          class="classification"
+          style="background-color: rgb(255, 0, 0); color: white !important"
+          *ngSwitchCase="'EMERGENCIA'"
+          >Emergência</span
+        >
+        <span
+          class="classification"
+          style="background-color: rgb(191, 194, 2); color: black !important"
+          *ngSwitchCase="'MUITO_URGENTE'"
+          >Muito Urgente</span
+        >
+        <span
+          class="classification"
+          style="background-color: rgb(0, 255, 34); color: black !important"
+          *ngSwitchCase="'POUCO_URGENTE'"
+          >Pouco Urgente</span
+        >
+        <span
+          class="classification"
+          style="background-color: rgb(0, 89, 255); color: white !important"
+          *ngSwitchCase="'NAO_URGENTE'"
+          >Não Urgente</span
+        >
+      </div>
+    </div>
+
+    <button mat-button class="logout" (click)="logout()">Sair</button>
+  </mat-card-header>
+</mat-card>
+<div fxLayout="row" fxLayoutAlign="center stretch">
+  <mat-card class="info-card">
+    <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+      <h2>Dados do paciente:</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item class="item">Email: {{ patient.email }}</mat-list-item>
+        <mat-list-item class="item">
+          Telefone: {{ patient.phone }}
+        </mat-list-item>
+        <mat-list-item class="item">
+          Data de Nascimento: {{ formatDate(patient.birthDate) }}
+        </mat-list-item>
+        <mat-list-item class="item"
+          >Sexo: {{ patient.genre.toLowerCase() }}</mat-list-item
+        >
+        <mat-list-item class="item">
+          Plano de Saúde: {{ patient.healthInsurance }}
+        </mat-list-item>
+        <mat-list-item class="item">
+          Número do cartão de saúde: {{ patient.healthCardNumber }}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="info-card">
+    <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+      <h2>Anamnese Digital:</h2>
+    </mat-card-header>
+    <!-- <mat-card-content>
+      <mat-list>
+        <mat-list-item class="item">Cpf: 125.050.877-95</mat-list-item>
+        <mat-list-item class="item"
+          >Email: v.brayansantos@gmail.com</mat-list-item
+        >
+        <mat-list-item class="item">Telefone: (35) 9 8450-1354</mat-list-item>
+        <mat-list-item class="item"
+          >Data de Nascimento: 12/12/2+9+</mat-list-item
+        >
+        <mat-list-item class="item">Sexo: {{ queueCall.genre }} </mat-list-item>
+        <mat-list-item class="item">Plano de Saúde: Unimed</mat-list-item>
+        <mat-list-item class="item">Carteira: 231.564.897.897</mat-list-item>
+        <mat-list-item class="item">CPF: 125.050.877-95</mat-list-item>
+      </mat-list>
+    </mat-card-content> -->
+  </mat-card>
+
+  <button class="add" (click)="addResponsible()" mat-flat-button>
+    Adicionar Responsável
+  </button>
+</div>
