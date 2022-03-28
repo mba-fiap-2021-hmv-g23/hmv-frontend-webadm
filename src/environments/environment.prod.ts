@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://hvm-backend-service.herokuapp.com/v1',
+  api: 'https://hmv-express-backend.herokuapp.com/v1',
 };
