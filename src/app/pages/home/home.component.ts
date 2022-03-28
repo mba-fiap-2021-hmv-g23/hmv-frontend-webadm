@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     if (this.selectedQueueCall) {
       return this.patients.filter(
         (patient: Patient) =>
-          patient.fullName === this.selectedQueueCall.fullName
+          patient.fullName === this.selectedQueueCall.patientFullName
       )[0];
     }
     return {} as Patient;

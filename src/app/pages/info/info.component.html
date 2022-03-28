@@ -3,7 +3,7 @@
     <div mat-card-avatar class="header-image"></div>
 
     <div fxLayout="column" fxLayoutAlign="start">
-      <h1>{{ queueCall.fullName }}</h1>
+      <h1>{{ queueCall.patientFullName }}</h1>
 
       <div [ngSwitch]="queueCall.riskClassification">
         <span

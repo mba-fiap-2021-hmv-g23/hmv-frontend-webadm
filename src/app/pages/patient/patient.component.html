@@ -2,10 +2,10 @@
   matRipple
   class="content"
   (click)="onClick()"
-  [class.selected]="queueCall.fullName === selectedId"
+  [class.selected]="queueCall.patientFullName === selectedId"
 >
   <mat-card-title>
-    <h2>{{ queueCall.fullName }}</h2>
+    <h2>{{ queueCall.patientFullName }}</h2>
   </mat-card-title>
   <mat-card-subtitle>
     Classificação:

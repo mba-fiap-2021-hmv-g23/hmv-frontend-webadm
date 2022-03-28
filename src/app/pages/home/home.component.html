@@ -14,7 +14,7 @@
         <app-patient
           *ngFor="let queUeCall of queUeCalls"
           [queueCall]="queUeCall"
-          [selectedId]="selectedQueueCall.fullName"
+          [selectedId]="selectedQueueCall.patientFullName"
           (onSelected)="onSelected($event)"
         ></app-patient>
       </div>

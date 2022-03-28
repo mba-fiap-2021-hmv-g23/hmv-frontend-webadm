@@ -22,12 +22,14 @@ export interface Patient {
 }
 
 export interface QueueCall {
-  age: string;
+  attendantFullName: string;
   checkInId: string;
-  fullName: string;
-  genre: string;
   lastCallDate: string;
+  patientAge: string;
+  patientFullName: string;
+  patientGenre: string;
   riskClassification: string;
+  serviceDesk: string;
 }
 
 export interface QueueCalls {
